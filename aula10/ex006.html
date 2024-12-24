@@ -17,14 +17,19 @@
     </style>
 </head>
 <body>
-    <div id="zone" onclick="change()" onmouseenter="enter()" onmouseout="exit()">
+    <div id="zone">
         Interaja...
     </div>
     <script type="text/javascript">
         var zone = document.getElementById('zone')
 
+        zone.addEventListener('click', change)
+        zone.addEventListener('mouseenter', enter)
+        zone.addEventListener('mouseout', exit)
+
         function change() {
             zone.innerText = 'Clicou !!!'
+            zone.style.background = 'red'
         }
 
         function enter() {
@@ -33,6 +38,7 @@
         
         function exit() {
             zone.innerText = 'Saiu !!!'
+            zone.style.background = 'green'
         }
     </script>
 </body>
