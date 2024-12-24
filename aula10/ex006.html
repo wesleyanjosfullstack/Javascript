@@ -17,8 +17,23 @@
     </style>
 </head>
 <body>
-    <div id="zone">
+    <div id="zone" onclick="change()" onmouseenter="enter()" onmouseout="exit()">
         Interaja...
     </div>
+    <script type="text/javascript">
+        var zone = document.getElementById('zone')
+
+        function change() {
+            zone.innerText = 'Clicou !!!'
+        }
+
+        function enter() {
+            zone.innerText = 'Entrou !!!'
+        }
+        
+        function exit() {
+            zone.innerText = 'Saiu !!!'
+        }
+    </script>
 </body>
 </html>
